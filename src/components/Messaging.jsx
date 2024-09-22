@@ -4,7 +4,7 @@ import LogNav from "./LogNav"
 
 
 
-const endpoint = "https://localhost:443"
+const endpoint = "http://localhost:5000"
 export default function Messaging(props) {
     const [contacts, setContacts] = useState([])
     const user = useContext(UserContext)

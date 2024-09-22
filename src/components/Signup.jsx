@@ -7,7 +7,7 @@ import Loading from "./Loading"
 import { FaChild, FaGraduationCap} from "react-icons/fa";
 
 const formQuantity = 5
-const endpoint = "https://localhost:443"
+const endpoint = "http://localhost:5000"
 export default function Signup(props) {
     const [code, setCode] = useState("")
     const [bio, setBio] = useState("")
@@ -70,9 +70,15 @@ export default function Signup(props) {
                     img: img
                 })
               }
+
+              try{
             const response = await fetch(endpoint + "/signup", headers)
 
             resolve(response.json())
+              }catch(e)
+              {
+                console.log(e)
+              }
             
         })
     }

@@ -7,7 +7,7 @@ import Messaging from "./Messaging"
 import Settings from "./Settings"
 import Pricing from "./Pricing"
 import { FaBarsStaggered } from "react-icons/fa6";
-const endpoint = "https://localhost:443"
+const endpoint = "http://localhost:5000"
 export default function Main(props){
 
 
@@ -78,12 +78,8 @@ export default function Main(props){
     const processSearch = () => {
         
         callSearch().then((res) => {
-            if (res.code === "err") {
-                window.location.replace("/login")
-            } else if (res.code === "ok") {
+            if (res.code === "ok") {
                 setSearchResults(res.message)
-            } else {
-                window.location.replace("/login")
             }
         })
     }
@@ -241,16 +237,15 @@ export default function Main(props){
     const processMatch = (uuid) => {
 
 
-        setLoading(true)
+        // setLoading(true)
 
         callMatch(uuid).then((res) => {
             if (res.code === "err") {
-                window.location.replace("/login")
+              
             } else if (res.code === "ok") {
                 setLoading(false)
                 // Heres the thing right.
             } else {
-                window.location.replace("/login")
             }
         })
     }
@@ -286,7 +281,7 @@ export default function Main(props){
         })
     }
     const processStudents = async (i, search) => {
-        setLoading(true)
+        // setLoading(true)
         callStudent(i, search).then((res) => {
             console.log(res)
             if (res.code === "err") {
@@ -327,7 +322,7 @@ export default function Main(props){
 
                 // all went well
             } else {
-                window.location.replace("/login")
+                // window.location.replace("/login")
             }
         })
     }
@@ -386,12 +381,12 @@ export default function Main(props){
     useEffect(() => {
         async function doEverything() {
             
-            setLoading(true)
+            // setLoading(true)
             await callGetUser().then((res) => {
             if (res.code === "err") {
                 console.log("this error occured", )
-                setLoading(false)
-                window.location.replace("/login")
+                // setLoading(false)
+                // window.location.replace("/login")
             } else if (res.code === "ok") {
                 if ((res.message.student) && (res.message.tokens === 0)) {
                     // window.location.replace("/pricing")
@@ -603,7 +598,7 @@ export default function Main(props){
 
                                            
                                             <div className="btn w-full mt-2 btn-primary" onClick={() => {
-                                                setLoading(true)
+                                                // setLoading(true)
                                                 if (user.tokens >= 350) {
                                                     requestCall(student.uuid).then((res) => {
                                                         if (res.message === "not logged in") {
