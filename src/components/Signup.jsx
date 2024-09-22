@@ -7,7 +7,7 @@ import Loading from "./Loading"
 import { FaChild, FaGraduationCap} from "react-icons/fa";
 
 const formQuantity = 5
-const endpoint = "https://localhost:443"
+const endpoint = process.env.REACT_APP_SERVER_URL
 export default function Signup(props) {
     const [code, setCode] = useState("")
     const [bio, setBio] = useState("")

@@ -3,7 +3,7 @@ import Navbar from "./Navbar"
 import FormError from "./FormError"
 import Loading from "./Loading"
 import Footer from "./Footer"
-const endpoint =  "https://localhost:443"
+const endpoint =  process.env.REACT_APP_SERVER_URL
 export default function Login(props) {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")

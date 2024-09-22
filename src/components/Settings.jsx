@@ -3,7 +3,7 @@ import LogNav from "./LogNav"
 import { UserContext } from "./Contexts"
 import FormError from "./FormError"
 import Loading from "./Loading"
-const endpoint =  "https://localhost:443"
+const endpoint =  process.env.REACT_APP_SERVER_URL
 export default function Settings(props) {
 
 

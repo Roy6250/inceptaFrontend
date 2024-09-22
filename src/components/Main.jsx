@@ -7,7 +7,7 @@ import Messaging from "./Messaging"
 import Settings from "./Settings"
 import Pricing from "./Pricing"
 import { FaBarsStaggered } from "react-icons/fa6";
-const endpoint = "https://localhost:443"
+const endpoint = process.env.REACT_APP_SERVER_URL
 export default function Main(props){
 
 

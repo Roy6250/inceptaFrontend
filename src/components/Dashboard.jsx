@@ -2,7 +2,7 @@ import React, {useState, useContext, useEffect} from "react";
 import {UserContext, MenuContext} from "./Contexts";
 
 
-const endpoint =  "https://localhost:443"
+const endpoint =  process.env.REACT_APP_SERVER_URL
 export default function Dashboard(props) {
 
     const users = useContext(UserContext);
