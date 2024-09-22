@@ -2,7 +2,7 @@ import React from "react"
 import { FaPeopleCarry } from "react-icons/fa";
 import {loadStripe} from "@stripe/stripe-js"
 import SearchCollege from "./SearchCollege"
-const endpoint =  "https://localhost:443"
+const endpoint =  "http://localhost:5000"
 
 const stripe = await loadStripe("pk_live_51PfrGXB0G0gRD2WAbGSwORPy5hO4OQLJ608Jtz0xrCugbvOn1RBV9hVGYMJ75fjJ62SZZeWgt3mSRk2Ej7wnXeti00eYLYVuOD")
 export default function Pricing(props) {

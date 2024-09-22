@@ -6,7 +6,7 @@ import Loading from "./Loading"
 
 
 
-const endpoint =  "https://localhost:443"
+const endpoint =  "http://localhost:5000"
 export default function SearchCollege(props) {
     const [searchBar, setSearchBar] = useState("")
     const [errorMessage, setErrorMessage] = useState("No mentors found")
