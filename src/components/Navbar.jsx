@@ -32,7 +32,7 @@ export default function Navbar(props) {
                     </div> */}
 
                     
-                    <a href="/main" className="btn btn-primary font-1 text-lg btn-outline">
+                    <a href="/login" className="btn btn-primary font-1 text-lg btn-outline">
                         <p>Login</p>
                     </a>
                     <a href="/signup" className="btn btn-accent font-1 text-lg">
