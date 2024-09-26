@@ -2,7 +2,7 @@ import React from "react"
 import Index from "./Index"
 import Login from "./Login"
 import Signup from "./Signup"
-import PricingPage from "./PricingPage"
+// import PricingPage from "./PricingPage"
 import Main from "./Main"
 import Terms from "./Terms"
 import Privacy from "./Privacy"
@@ -28,7 +28,7 @@ export default function App(props) {
             <Route index path="/" element={<Index />} />
             <Route index path="/login" element={<Login />} />
             <Route index path="/signup" element={<Signup />} />
-            <Route path="/pricing" element={<PricingPage />} />
+            {/* <Route path="/pricing" element={<PricingPage />} /> */}
             <Route index path="/main" element={<Main />} />
             <Route path="/forgotPassword" element={<ForgotPassword />} />
             {/* <Route path="/search" element={<SearchCollege />} /> */}
