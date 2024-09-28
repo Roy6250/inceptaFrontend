@@ -11,7 +11,7 @@ export default function Loading(props) {
 
 
 
-
+    // console.log()
     return (
 
         <div className="fixed w-screen h-screen opacity-75 bg-base-300 z-50">
