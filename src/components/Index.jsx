@@ -54,7 +54,7 @@ export default function Index(props) {
                         <path strokeLinecap="round" strokeLinejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
                     </svg>
                     <p className="font-2 text-4xl text-center font-bold">Connect Fast</p>
-                    <p className="font-2 text-3xl text-center">Match with a college student, get accepted, and start chatting. <span className="font-bold">Just two clicks.</span></p>
+                    <p className="font-2 text-3xl text-center">Match with a college student, get accepted, and start chatting! <span className="font-bold">Just two clicks.</span></p>
                 </div>
                 <div className="flex flex-col p-10 content-center items-center gap-5 bg-base-100 rounded-xl">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-48">
