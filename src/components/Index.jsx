@@ -211,7 +211,7 @@ export default function Index(props) {
                     </div>
                     <div className="card-body flex flex-col gap-5">
                         <div>
-                            <h2 className="card-title text-4xl">Syaon</h2>
+                            <h2 className="card-title text-4xl">Sayan</h2>
                             <div className="badge badge-accent font-1 badge-lg badge-outline">11th Grade</div>
                         </div>
                         
