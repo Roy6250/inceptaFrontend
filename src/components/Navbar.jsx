@@ -1,73 +1,11 @@
-import React from "react"
-import { FaBars } from "react-icons/fa";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-
-
-export default function Navbar(props) {
-
-
-
-
-
-    return (
-        
-        <>
-
-
-        <div className="navbar sticky top-0 left-0 w-full p-5 bg-base-300 z-10" data-theme="forest">
-            <div className="flex-1">
-                <a href="/" className="btn btn-primary btn-ghost btn-lg">
-                    <p className="font-1 text-4xl font-bold">incepta</p>
-                </a>
-               
-            </div>
-
-            <div className="flex-0 sm:block hidden">
-                <div className="w-full font-2 text-2xl flex flex-row gap-4 items-center justify-items-center"> 
-                    {/* <div className="btn btn-ghost">
-                        <p>About us</p>
-                    </div> */}
-                    {/* <div className="btn btn-ghost">
-                        <p>What we do</p>
-                    </div> */}
-
-                    
-                    <a href="/login" className="btn btn-primary font-1 text-lg btn-outline">
-                        <p>Login</p>
-                    </a>
-                    <a href="/signup" className="btn btn-accent font-1 text-lg">
-                        <p>Signup</p>
-                    </a>
-            
-                 
-                    
-                </div>
-            </div>
-
-            <div className="flex-0 sm:hidden block">
-                <div class="dropdown dropdown-bottom dropdown-end">
-                    <div tabindex="0" role="button" class="btn m-1"><FaBars /></div>
-                        <ul tabindex="0" class="dropdown-content gap-2 menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
-                            {/* <li className=""><a className="font-2 font-bold">About Us</a></li> */}
-                            {/* <li className=""><a className="font-2 font-bold">What we do</a></li> */}
-                            {/* <li className=""><a className="font-2 font-bold">Pricing</a></li> */}
-
-                            <li className=""><a href="/main" className="font-2 font-bold  text-white hover:bg-primary hover:text-black border-2 border-primary">Login</a></li>
-                            <li className=""><a href="/signup" className="font-2 font-bold  text-white hover:bg-accent hover:text-black border-2 border-accent">Signup</a></li>
-                        </ul>
-                    </div>
-            </div>
-        </div>
-
-
-
-        
-
-
-
-
-        </>
-    )
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
+  return <header className="site-header"><nav className="page-container site-nav" aria-label="Main navigation">
+    <Link className="brand" to="/" onClick={() => setOpen(false)}><span className="brand-mark" aria-hidden="true">✳</span><span>incepta<span className="brand-period">.</span></span></Link>
+    <button className="nav-toggle" type="button" aria-expanded={open} aria-controls="nav-links" aria-label={open ? "Close menu" : "Open menu"} onClick={() => setOpen(!open)}><span /><span /></button>
+    <div className={`nav-links${open ? " nav-links--open" : ""}`} id="nav-links"><a href="/#why-incepta" onClick={() => setOpen(false)}>Why Incepta</a><a href="/#how-it-works" onClick={() => setOpen(false)}>How it works</a><Link to="/login" onClick={() => setOpen(false)}>Log in</Link><Link className="nav-join" to="/signup" onClick={() => setOpen(false)}>Get started <span aria-hidden="true">↗</span></Link></div>
+  </nav></header>;
 }
-
-

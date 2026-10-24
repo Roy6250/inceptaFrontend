@@ -1,49 +1,21 @@
-import React from "react"
-import Index from "./Index"
-import Login from "./Login"
-import Signup from "./Signup"
-// import PricingPage from "./PricingPage"
-import Main from "./Main"
-import Terms from "./Terms"
-import Privacy from "./Privacy"
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Youtube from "./Youtube"
-import ForgotPassword from "./ForgotPassword"
+import React from "react";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import Index from "./Index";
+import AuthPage from "./AuthPage";
+import Workspace from "./Workspace";
+import Terms from "./Terms";
+import Privacy from "./Privacy";
+import ResetPage from "./ResetPage";
 
-import SearchCollege from "./SearchCollege";
-
-
-export default function App(props) {
-
-
-
-
-
-
-    return (
-        <>
-        <BrowserRouter>
-          <Routes>
-            
-            <Route index path="/" element={<Index />} />
-            <Route index path="/login" element={<Login />} />
-            <Route index path="/signup" element={<Signup />} />
-            {/* <Route path="/pricing" element={<PricingPage />} /> */}
-            <Route index path="/main" element={<Main />} />
-            <Route path="/forgotPassword" element={<ForgotPassword />} />
-            {/* <Route path="/search" element={<SearchCollege />} /> */}
-            <Route index path="/terms" element={<Terms/>} />
-            <Route index path="/privacy" element={<Privacy />} />
-            <Route path="/opfiosdifkvxcznkpqpwefd" element={<Youtube source="youtube" />} />
-            <Route path="/vnmcxvkiopqflvcxznkoif" element={<Youtube source="facebook" />} />
-            <Route path="/fioqpwoemvnckzxoiopo" element={<Youtube source="instagram" />} />            
-          </Routes>
-        </BrowserRouter>
-
-
-
-        </>
-    )
+export default function App() {
+  return <BrowserRouter><Routes>
+    <Route path="/" element={<Index />} />
+    <Route path="/login" element={<AuthPage mode="login" />} />
+    <Route path="/signup" element={<AuthPage mode="signup" />} />
+    <Route path="/main" element={<Workspace />} />
+    <Route path="/forgotPassword" element={<ResetPage />} />
+    <Route path="/terms" element={<Terms />} />
+    <Route path="/privacy" element={<Privacy />} />
+    <Route path="*" element={<div className="app-loading"><h1>Page not found.</h1><Link to="/">Back to Incepta</Link></div>} />
+  </Routes></BrowserRouter>;
 }
-
-
